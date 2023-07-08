@@ -3,6 +3,9 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(set(nums)) != len(nums)
+
+    def containsDuplicate_old(self, nums: List[int]) -> bool:
         if len(nums) <= 1:
             return False
         my_set = set()
